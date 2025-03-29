@@ -41,6 +41,8 @@ CREATE TABLE club_member_info_cleaned (
 INSERT INTO club_member_info_cleaned
 SELECT * FROM club_member_info;
 ```
+### Copy all values from DBEAVER 
+```SQL 
 UPDATE club_member_info_cleaned SET full_name = TRIM(full_name);
  SELECT TRIM(full_name) FROM club_member_info_cleaned cmic ;
 UPDATE club_member_info_cleaned SET full_name = UPPER(full_name);
