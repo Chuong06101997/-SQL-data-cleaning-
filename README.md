@@ -33,11 +33,14 @@ CREATE TABLE club_member_info_cleaned (
 	full_address VARCHAR(50),
 	job_title VARCHAR(50),
 	membership_date VARCHAR(50)
+);
+```
+### Copy all value from original table
 ```SQL
 
 INSERT INTO club_member_info_cleaned
 SELECT * FROM club_member_info;
-
+```
 UPDATE club_member_info_cleaned SET full_name = TRIM(full_name);
  SELECT TRIM(full_name) FROM club_member_info_cleaned cmic ;
 UPDATE club_member_info_cleaned SET full_name = UPPER(full_name);
